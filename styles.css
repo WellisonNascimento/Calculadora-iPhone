@@ -1,4 +1,106 @@
 body {
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  width: 320px;
+  background: #f7f8fa;
+  border-radius: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 24px 20px 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#display {
+  height: 60px;
+  font-size: 2.4em;
+  text-align: right;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  background: #f1f3f6;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  color: #222;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.button {
+  font-size: 1.3em;
+  padding: 18px 0;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #f7f8fa 0%, #e9ecef 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  color: #222;
+  font-weight: 500;
+}
+
+.button:active {
+  background: #dde3ea;
+  transform: scale(0.97);
+}
+.button.operation {
+  background: linear-gradient(180deg, #f7b731 0%, #f5a623 100%);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(247,183,49,0.13);
+}
+
+.button.operation:active {
+  background: #e1a727;
+}
+
+.button.equal {
+  background: linear-gradient(180deg, #3867d6 0%, #274fa1 100%);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(56,103,214,0.13);
+}
+.button.equal:active {
+  background: #274fa1;
+}
+.button.special {
+  background: linear-gradient(180deg, #d1d8e0 0%, #bfc5ce 100%);
+  color: #222;
+  font-weight: 500;
+}
+
+.button.special:active {
+  background: #bfc5ce;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 98vw;
+    padding: 8px;
+    border-radius: 24px;
+  }
+  #display {
+    font-size: 1.3em;
+    padding: 6px 8px;
+    border-radius: 10px;
+  }
+  .button {
+    font-size: 1em;
+    padding: 12px 0;
+    border-radius: 30px;
+  }
+}
+body {
   background-color: #000000;
   display: flex;
   justify-content: center;

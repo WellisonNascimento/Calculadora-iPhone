@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora iPhone</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="calculator">
-    <div class="display" id="display">0</div>
-    <div class="buttons">
-      <button class="function" onclick="clearDisplay()">AC</button>
-      <button class="function" onclick="toggleSign()">+/-</button>
-      <button class="function" onclick="percent()">%</button>
-      <button class="operator" onclick="setOperation('/')">÷</button>
-
-      <button onclick="appendNumber('7')">7</button>
-      <button onclick="appendNumber('8')">8</button>
-      <button onclick="appendNumber('9')">9</button>
-      <button class="operator" onclick="setOperation('*')">×</button>
-
-      <button onclick="appendNumber('4')">4</button>
-      <button onclick="appendNumber('5')">5</button>
-      <button onclick="appendNumber('6')">6</button>
-      <button class="operator" onclick="setOperation('-')">−</button>
-
-      <button onclick="appendNumber('1')">1</button>
-      <button onclick="appendNumber('2')">2</button>
-      <button onclick="appendNumber('3')">3</button>
-      <button class="operator" onclick="setOperation('+')">+</button>
-
-      <button class="zero" onclick="appendNumber('0')">0</button>
-      <button onclick="appendNumber('.')">.</button>
-      <button class="operator" onclick="calculate()">=</button>
-    </div>
-  </div>
-  <script src="./scripts.js"></script>
+  <main class="calculator" role="region" aria-label="Calculadora iPhone">
+    <section id="display" aria-live="polite" aria-atomic="true" tabindex="0">0</section>
+    <section class="buttons" role="group" aria-label="Teclas da calculadora">
+      <button class="button special" onclick="clearDisplay()" aria-label="Limpar">AC</button>
+      <button class="button special" onclick="toggleSign()" aria-label="Inverter sinal">±</button>
+      <button class="button special" onclick="percent()" aria-label="Porcentagem">%</button>
+      <button class="button operation" onclick="setOperation('/')" aria-label="Dividir">÷</button>
+      <button class="button" onclick="appendNumber('7')" aria-label="Sete">7</button>
+      <button class="button" onclick="appendNumber('8')" aria-label="Oito">8</button>
+      <button class="button" onclick="appendNumber('9')" aria-label="Nove">9</button>
+      <button class="button operation" onclick="setOperation('*')" aria-label="Multiplicar">×</button>
+      <button class="button" onclick="appendNumber('4')" aria-label="Quatro">4</button>
+      <button class="button" onclick="appendNumber('5')" aria-label="Cinco">5</button>
+      <button class="button" onclick="appendNumber('6')" aria-label="Seis">6</button>
+      <button class="button operation" onclick="setOperation('-')" aria-label="Subtrair">−</button>
+      <button class="button" onclick="appendNumber('1')" aria-label="Um">1</button>
+      <button class="button" onclick="appendNumber('2')" aria-label="Dois">2</button>
+      <button class="button" onclick="appendNumber('3')" aria-label="Três">3</button>
+      <button class="button operation" onclick="setOperation('+')" aria-label="Somar">+</button>
+      <button class="button" onclick="appendNumber('0')" style="grid-column: span 2;" aria-label="Zero">0</button>
+      <button class="button" onclick="appendNumber('.')" aria-label="Decimal">.</button>
+      <button class="button equal" onclick="calculate()" aria-label="Igual">=</button>
+    </section>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
 </body>
 </html>
